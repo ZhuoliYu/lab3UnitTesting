@@ -26,17 +26,17 @@ namespace UnitTestingLab3
             ParkingSpaceBl = new BLLParking(ParkingSapceMRepo.Object);
         }
         [TestMethod]
-        public void CreatePasswithPurchaseLessThan3letterThrowException()
+        public void PassPurchaserLessThanThreeLetter()
         {
             //Arrange
-            string purchase = "1";
+            string purchase = "CC";
             var newPass = new Pass(purchase);
             //Act&Assert
             Assert.ThrowsException<Exception>(() => PassBl.CreatePass(newPass));
         }
 
         [TestMethod]
-        public void CreateParkingSpacewithNumberLessThan1ThrowExecption()
+        public void ParkedSpaceLessThanOne()
         {
             //Arrange
             int number = 0;
